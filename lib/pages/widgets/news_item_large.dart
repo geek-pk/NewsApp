@@ -55,7 +55,7 @@ class NewsItemLarge extends StatelessWidget {
               ),
               InkWell(
                   onTap: () => _onShare(context, articles!.url!),
-                  child: const Icon(Icons.more_vert)),
+                  child: const Icon(Icons.share)),
             ],
           ),
         ],

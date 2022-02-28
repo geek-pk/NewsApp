@@ -16,8 +16,10 @@ class NewsDetailsPage extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: const Text('News App'),
-          leading: const Icon(Icons.arrow_back_ios),
+          // title: const Text('News App'),
+          leading: InkWell(
+              onTap: () => Navigator.pop(context),
+              child: const Icon(Icons.arrow_back_ios)),
         ),
         body: Padding(
           padding: const EdgeInsets.all(16.0),
@@ -57,7 +59,7 @@ class NewsDetailsPage extends StatelessWidget {
                   ),
                   InkWell(
                       onTap: () => _onShare(context, articles!.url!),
-                      child: const Icon(Icons.more_vert)),
+                      child: const Icon(Icons.share)),
                 ],
               ),
               const SizedBox(height: 8),
